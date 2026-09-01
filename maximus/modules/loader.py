@@ -31,7 +31,7 @@ class LoaderMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "MODULES_REPO",
-                "https://gitlab.com/name-cho/MaximusStore",
+                "https://gitverse.ru/name-cho/MaximusStore",
                 lambda: "Репозиторий модулей по умолчанию",
                 validator=loader.validators.Link(),
             ),

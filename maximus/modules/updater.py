@@ -151,7 +151,7 @@ class UpdaterMod(loader.Module):
             f"📦 **Maximus v{version.pretty()}**\n"
             f"Коммит: {utils.mono(commit)} (build {count})\n"
             f"Ветка: {utils.mono(version.branch)}\n"
-            f"Исходники: https://gitlab.com/name-cho/Maximus",
+            f"Исходники: https://gitverse.ru/name-cho/Maximus",
         )
 
     @loader.owner

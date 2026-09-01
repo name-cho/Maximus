@@ -1,7 +1,3 @@
-# 🌐 https://gitlab.com/name-cho/Maximus
-
-
-# meta developer: @name_cho
 # scope: maximus_only
 
 import contextlib
@@ -48,7 +44,7 @@ class CoreMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "repo_url",
-                "https://gitlab.com/name-cho/Maximus",
+                "https://gitverse.ru/name-cho/Maximus",
                 lambda: "Ссылка на репозиторий в .maximus",
                 validator=loader.validators.Link(),
             ),

@@ -5,7 +5,7 @@
 ## Установка
 
 ```bash
-git clone https://gitlab.com/name-cho/Maximus
+git clone https://gitverse.ru/name-cho/Maximus
 cd Maximus
 pip install -r requirements.txt
 python -m maximus
@@ -63,7 +63,7 @@ python -m maximus --web
 
 ## Maximus Store
 
-Магазин модулей из репозитория [name-cho/MaximusStore](https://gitlab.com/name-cho/MaximusStore).
+Магазин модулей из репозитория [name-cho/MaximusStore](https://gitverse.ru/name-cho/MaximusStore).
 
 ```bash
 .ss <запрос>   — поиск модулей

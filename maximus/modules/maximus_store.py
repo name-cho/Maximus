@@ -14,8 +14,8 @@ from pymax import Message
 from .. import loader, utils
 
 REPO = "name-cho/MaximusStore"
-API = f"https://gitlab.com/api/v4/projects/{REPO.replace('/', '%2F')}/repository/tree?per_page=100"
-RAW = f"https://gitlab.com/{REPO}/-/raw/main"
+API = f"https://gitverse.ru/api/v1/repos/{REPO}/contents"
+RAW = f"https://gitverse.ru/{REPO}/raw/branch/main"
 
 PENDING_UPDATES = {}
 UPDATES_TTL = 600
@@ -84,7 +84,7 @@ class MaximusStore(loader.Module):
             async with s.get(API, headers={"User-Agent": "Maximus"}) as r:
                 if r.status == 200:
                     data = await r.json()
-                    return [i for i in data if i["type"] == "blob" and i["name"].endswith(".py")]
+                    return [i for i in data if i.get("type") == "file" and i["name"].endswith(".py")]
         return None
 
     async def _meta(self, name):
@@ -269,4 +269,4 @@ class MaximusStore(loader.Module):
     async def srcmd(self, message: Message):
         """.sr — информация о магазине"""
         p = self.get_prefix()
-        await utils.answer(message, utils.heading("📂 Магазин модулей") + "\n" + utils.quote(f"🔗 https://gitlab.com/{REPO}") + f"\n{p}ss <запрос> — поиск\n{p}sl — список\n{p}sd <номер> — скачать\n{p}su — проверить\n{p}sg y — обновить")
+        await utils.answer(message, utils.heading("📂 Магазин модулей") + "\n" + utils.quote(f"🔗 https://gitverse.ru/{REPO}") + f"\n{p}ss <запрос> — поиск\n{p}sl — список\n{p}sd <номер> — скачать\n{p}su — проверить\n{p}sg y — обновить")
