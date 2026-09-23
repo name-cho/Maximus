@@ -5,7 +5,7 @@
 ## Установка
 
 ```bash
-git clone https://gitverse.ru/name-cho/Maximus
+git clone https://github.com/name-cho/Maximus
 cd Maximus
 pip install -r requirements.txt
 python -m maximus
